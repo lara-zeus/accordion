@@ -1,0 +1,73 @@
+{
+    "name": "lara-zeus/accordion",
+    "description": "Zeus Accordion is filamentphp layout component to group components",
+    "keywords": [
+        "laravel",
+        "lara-zeus",
+        "ui",
+        "tooltip",
+        "tippy",
+        "accordion",
+        "code",
+        "design",
+        "input",
+        "coulmn",
+        "field",
+        "generator",
+        "filamentphp"
+    ],
+    "homepage": "https://larazeus.com/accordion",
+    "support": {
+        "issues": "https://github.com/lara-zeus/accordion/issues",
+        "source": "https://github.com/lara-zeus/accordion"
+    },
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "php coder",
+            "email": "info@larazeus.com",
+            "role": "Owner"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^3.0",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "nunomaduro/phpinsights": "^2.8",
+        "orchestra/testbench": "^8.0",
+        "phpstan/extension-installer": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaraZeus\\Accordion\\": "src"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint",
+        "pint": "vendor/bin/pint",
+        "test:phpstan": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraZeus\\Accordion\\AccordionServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
