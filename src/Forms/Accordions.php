@@ -3,8 +3,8 @@
 namespace App\Forms\Components;
 
 use App\Filament\Concerns\CanBeIsolated;
-use Filament\Forms\Components\Component;
 use Closure;
+use Filament\Forms\Components\Component;
 use Filament\Support\Concerns;
 
 class Accordions extends Component
