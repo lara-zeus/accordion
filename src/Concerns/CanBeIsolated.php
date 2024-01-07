@@ -1,6 +1,6 @@
 <?php
 
-namespace LaraZeus\Popover\Concerns;
+namespace LaraZeus\Accordion\Concerns;
 
 use Closure;
 

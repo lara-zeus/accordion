@@ -1,13 +1,13 @@
 <?php
 
-namespace LaraZeus\Popover;
+namespace LaraZeus\Accordion;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class PopoverServiceProvider extends PackageServiceProvider
+class AccordionServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'zeus-popover';
+    public static string $name = 'zeus-accordion';
 
     public function configurePackage(Package $package): void
     {

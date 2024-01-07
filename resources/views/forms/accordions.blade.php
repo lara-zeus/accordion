@@ -26,7 +26,7 @@
                         this.activeAccordion = (this.activeAccordion == id) ? '' : id
                     }
                 }"
-         class="relative w-full mx-auto overflow-hidden text-sm divide-y divide-gray-200 rounded-xl"
+         class="relative w-full mx-auto overflow-hidden text-sm divide-y divide-gray-200 dark:divide-white/5 rounded-xl"
     >
         @foreach ($getChildComponentContainer()->getComponents() as $accordion)
             <div
@@ -38,7 +38,7 @@
                 <button
                     type="button"
                     @click="setActiveAccordion(id)"
-                    :class="{ 'bg-gray-100': activeAccordion == id }"
+                    :class="{ 'bg-gray-100 dark:bg-gray-800': activeAccordion == id }"
                     class="flex items-center justify-between w-full p-4 text-start select-none"
                 >
                     <span

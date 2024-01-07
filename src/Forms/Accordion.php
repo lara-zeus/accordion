@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Forms\Components;
+namespace LaraZeus\Accordion\Forms;
 
 use Closure;
 use Filament\Forms\Components\Component;
@@ -14,7 +14,7 @@ class Accordion extends Component implements CanConcealComponents
     use HasBadge;
     use HasIcon;
 
-    protected string $view = 'forms.components.accordion';
+    protected string $view = 'zeus-accordion::forms.accordion';
 
     final public function __construct(string $label)
     {

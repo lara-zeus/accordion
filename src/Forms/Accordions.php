@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Forms\Components;
+namespace LaraZeus\Accordion\Forms;
 
-use App\Filament\Concerns\CanBeIsolated;
 use Closure;
 use Filament\Forms\Components\Component;
 use Filament\Support\Concerns;
+use LaraZeus\Accordion\Concerns\CanBeIsolated;
 
 class Accordions extends Component
 {
     use CanBeIsolated;
     use Concerns\HasExtraAlpineAttributes;
 
-    protected string $view = 'forms.components.accordions';
+    protected string $view = 'zeus-accordion::forms.accordions';
 
     protected int | Closure $activeAccordion = 1;
 
