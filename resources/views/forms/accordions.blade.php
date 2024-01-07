@@ -43,10 +43,10 @@
                 >
                     <span
                         :class="{
-                                'text-custom-600': activeAccordion == id ,
+                                'text-primary-600': activeAccordion == id ,
                                 'text-gray-500': activeAccordion != id
                             }"
-                        class="flex gap-2 font-medium items-center justify-center text-gray-500 group-hover:text-custom-600">
+                        class="flex gap-2 font-medium items-center justify-center text-gray-500 group-hover:text-primary-600">
                         @if ($accordion->getIcon())
                             <x-filament::icon
                                 :icon="$accordion->getIcon()"
