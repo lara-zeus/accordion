@@ -4,26 +4,26 @@ weight: 1
 ---
 
 ## Introduction
-@zeus Popover is filamentphp component to show a Popover (tippyjs) with custom content in tables and infolist
+Group forms component in an Accordion layout
 
-**[Demo](https://demo.larazeus.com/admin/users) · [Github](https://github.com/lara-zeus/popover) · [Discord](https://discord.com/channels/883083792112300104/1191457684856246353)**
+**[Demo](https://demo.larazeus.com/admin/accordion) · [Github](https://github.com/lara-zeus/accordion) · [Discord](#)**
 
-## features
+## Features
 
-- 🔥 trigger (click)
-- 🔥 placement (right)
-- 🔥 offset from the content
-- 🔥 Max Width
-- 🔥 icon
+- 🔥 same look and feel as filament components
+- 🔥 can be used as connected accordion, or isolated
+- 🔥 set the active accordion
+- 🔥 set icon per accordion
 
 ## Screenshots
 
-![](https://larazeus.com/images/screenshots/popover/popover-1.jpeg)
+![](https://larazeus.com/images/screenshots/accordion/accordion-1.png)
+![](https://larazeus.com/images/screenshots/accordion/cover.png)
 
 ## Support
 
 Available support channels:
 
-* Join our channel in discord [Discord](https://discord.com/channels/883083792112300104/1191457684856246353)
-* Open an issue on [GitHub](https://github.com/lara-zeus/popover/issues)
+* Join our channel in discord [Discord](#)
+* Open an issue on [GitHub](https://github.com/lara-zeus/accordion/issues)
 * Email us using the [contact center](https://larazeus.com/contact-us)

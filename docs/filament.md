@@ -1,24 +1,23 @@
-# Zeus Popover Component
+# Zeus Accordion layout Component
 
-Popover (tippyjs) with custom content in tables and infolist
+Group forms component in an Accordion layout
 
 ## Features
 
-## features
-- 🔥 trigger (click)
-- 🔥 placement (right)
-- 🔥 offset from the content
-- 🔥 Max Width
-- 🔥 icon
+🔥 same look and feel as filament components 
+🔥 can be used as connected accordion, or isolated 
+🔥 set the active accordion 
+🔥 set icon per accordion
 
 ## Screenshots
 
-![](https://larazeus.com/images/screenshots/popover/popover-1.jpeg)
+![](https://larazeus.com/images/screenshots/accordion/accordion-1.png)
+![](https://larazeus.com/images/screenshots/accordion/cover.png)
 
 ## More Details
-**✨ to learn more about Popover, please visit:**
+**✨ to learn more about Accordion, please visit:**
 
-- [Discord](https://discord.com/channels/883083792112300104/1191457684856246353)
-- [Docs](https://larazeus.com/docs/popover)
-- [Github](https://github.com/lara-zeus/popover)
-- [Demo](https://demo.larazeus.com/admin/users)
+- [Discord](#)
+- [Docs](https://larazeus.com/docs/accordion)
+- [Github](https://github.com/lara-zeus/accordion)
+- [Demo](https://demo.larazeus.com/admin/accordion)

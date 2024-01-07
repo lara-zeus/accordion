@@ -1,7 +1,7 @@
 ---
 title: v1
-slogan: filamentphp component to show a Popover with custom content in tables and infolist
-githubUrl: https://github.com/lara-zeus/popover
+slogan: filamentphp layout Group forms component in an Accordion layout
+githubUrl: https://github.com/lara-zeus/accordion
 branch: v1.x
-icon: grommet-tip
+icon: vaadin-accordion-menu
 ---
