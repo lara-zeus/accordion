@@ -11,6 +11,14 @@ Install @zeus Accordion by running the following commands in your Laravel projec
 composer require lara-zeus/accordion
 ```
 
+## theme
+
+add this path to your tailwind config file in the `content` array
+
+```js
+'./vendor/lara-zeus/accordion/resources/views/**/*.blade.php',
+```
+
 ## Usage:
 
 ### use it in your form:

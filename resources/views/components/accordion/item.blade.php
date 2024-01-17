@@ -17,13 +17,13 @@
             class="flex items-center justify-between w-full p-4 text-start select-none"
             :class="{
                 'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
-                'bg-white': activeAccordion != id,
+                'bg-white dark:bg-gray-800/50': activeAccordion != id,
              }"
     >
         <span
             :class="{
                 'text-primary-600': activeAccordion == id ,
-                'text-gray-500': activeAccordion != id
+                'text-white/70': activeAccordion != id
             }"
             class="flex gap-2 font-medium items-center justify-center text-gray-500 group-hover:text-primary-600"
         >
