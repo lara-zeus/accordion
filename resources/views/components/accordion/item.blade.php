@@ -22,8 +22,8 @@
     >
         <span
             :class="{
-                'text-primary-600': activeAccordion == id ,
-                'text-white/70': activeAccordion != id
+                'text-primary-600 dark:text-primary-500': activeAccordion == id ,
+                'text-gray-500 dark:text-white/70': activeAccordion != id
             }"
             class="flex gap-2 font-medium items-center justify-center text-gray-500 group-hover:text-primary-600"
         >
