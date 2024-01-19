@@ -6,7 +6,7 @@ weight: 1
 ## Introduction
 Group forms component in an Accordion layout
 
-**[Demo](https://demo.larazeus.com/admin/accordion) · [Github](https://github.com/lara-zeus/accordion) · [Discord](#)**
+**[Demo](https://demo.larazeus.com/admin/components-demo/accordion) · [Github](https://github.com/lara-zeus/accordion) · [Discord](#)**
 
 ## Features
 

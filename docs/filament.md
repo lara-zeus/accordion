@@ -20,4 +20,4 @@ Group forms component in an Accordion layout
 - [Discord](#)
 - [Docs](https://larazeus.com/docs/accordion)
 - [Github](https://github.com/lara-zeus/accordion)
-- [Demo](https://demo.larazeus.com/admin/accordion)
+- [Demo](https://demo.larazeus.com/admin/components-demo/accordion)

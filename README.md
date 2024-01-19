@@ -25,7 +25,7 @@
 
 ## Demo
 
-> Visit our demo site: https://demo.larazeus.com/admin/accordion
+> Visit our demo site: https://demo.larazeus.com/admin/components-demo/accordion
 
 ## Full Documentation
 
