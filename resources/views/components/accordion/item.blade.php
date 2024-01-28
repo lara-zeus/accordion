@@ -36,7 +36,7 @@
             {{ $label }}
         </span>
         <span :class="{ 'rotate-180': activeAccordion == id }">
-            @svg('heroicon-c-chevron-down','w-4 h-4 duration-200 ease-out')
+            @svg('heroicon-m-chevron-down','w-4 h-4 duration-200 ease-out')
         </span>
     </button>
     <div class="p-4" x-show="activeAccordion == id" x-collapse x-cloak>
