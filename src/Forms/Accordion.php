@@ -11,8 +11,8 @@ use Illuminate\Support\Str;
 
 class Accordion extends Component implements CanConcealComponents
 {
-    use HasIcon;
     use HasBadge;
+    use HasIcon;
 
     protected string $view = 'zeus-accordion::forms.accordion';
 

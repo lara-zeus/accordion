@@ -1,6 +1,6 @@
 ---
 title: Blade Component
-weight: 4
+weight: 5
 ---
 
 ## Accordion Blade Component
@@ -13,6 +13,8 @@ you can use accordion as a blade component in any view you want
             :isIsolated="true"
             :label="__('title')"
             icon="heroicon-o-chevron-right"
+            badge="New Item"
+            badgeColor="danger"
     >
         <div class="bg-white p-4 *:py-2">
             <p>title</p>
