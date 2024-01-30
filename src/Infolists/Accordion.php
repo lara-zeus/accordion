@@ -1,20 +1,19 @@
 <?php
 
-namespace LaraZeus\Accordion\Forms;
+namespace LaraZeus\Accordion\Infolists;
 
 use Closure;
-use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Contracts\CanConcealComponents;
+use Filament\Infolists\Components\Component;
 use Filament\Support\Concerns\HasBadge;
 use Filament\Support\Concerns\HasIcon;
 use Illuminate\Support\Str;
 
-class Accordion extends Component implements CanConcealComponents
+class Accordion extends Component
 {
     use HasIcon;
     use HasBadge;
 
-    protected string $view = 'zeus-accordion::forms.accordion';
+    protected string $view = 'zeus-accordion::infolists.accordion';
 
     final public function __construct(string $label)
     {
@@ -30,11 +29,6 @@ class Accordion extends Component implements CanConcealComponents
     public function getColumnsConfig(): array
     {
         return $this->columns ?? $this->getContainer()->getColumnsConfig();
-    }
-
-    public function canConcealComponents(): bool
-    {
-        return true;
     }
 
     public static function make(string | Closure | null $label = null): static
