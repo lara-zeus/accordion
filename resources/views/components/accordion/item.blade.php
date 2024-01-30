@@ -3,6 +3,8 @@
     'isIsolated' => false,
     'icon' => null,
     'label' => '',
+    'badge' => null,
+    'badgeColor' => null,
 ])
 <div
     x-data="{
@@ -34,6 +36,12 @@
                 />
             @endif
             {{ $label }}
+
+            @if (filled($badge))
+                <x-filament::badge :color="$badgeColor" size="sm" class="w-max">
+                    {{ $badge }}
+                </x-filament::badge>
+            @endif
         </span>
         <span :class="{ 'rotate-180': activeAccordion == id }">
             @svg('heroicon-m-chevron-down','w-4 h-4 duration-200 ease-out')

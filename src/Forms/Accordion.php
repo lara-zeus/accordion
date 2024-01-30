@@ -5,12 +5,14 @@ namespace LaraZeus\Accordion\Forms;
 use Closure;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\Contracts\CanConcealComponents;
+use Filament\Support\Concerns\HasBadge;
 use Filament\Support\Concerns\HasIcon;
 use Illuminate\Support\Str;
 
 class Accordion extends Component implements CanConcealComponents
 {
     use HasIcon;
+    use HasBadge;
 
     protected string $view = 'zeus-accordion::forms.accordion';
 
@@ -41,12 +43,5 @@ class Accordion extends Component implements CanConcealComponents
         $static->configure();
 
         return $static;
-    }
-
-    public function badge(string | Closure | null $badge): static
-    {
-        $this->badge = $badge;
-
-        return $this;
     }
 }

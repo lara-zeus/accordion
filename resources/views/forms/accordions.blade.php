@@ -25,6 +25,8 @@
             <x-zeus-accordion::accordion.item
                     :label="$accordion->getLabel()"
                     :icon="$accordion->getIcon()"
+                    :badge="$accordion->getBadge()"
+                    :badge-color="$accordion->getBadgeColor()"
                     :isIsolated="$isIsolated"
                     :activeAccordion="$getActiveAccordion">
                 {{ $accordion }}
