@@ -10,8 +10,8 @@ use Illuminate\Support\Str;
 
 class Accordion extends Component
 {
-    use HasIcon;
     use HasBadge;
+    use HasIcon;
 
     protected string $view = 'zeus-accordion::infolists.accordion';
 
