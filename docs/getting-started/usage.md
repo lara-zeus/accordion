@@ -27,7 +27,7 @@ to use @zeus accordion in your forms:
 ,
 ```
 
-## In Forms
+## In Infolist
 
 to use @zeus accordion in your infolist:
 
