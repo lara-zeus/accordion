@@ -20,7 +20,7 @@ to use @zeus accordion in your forms:
         \LaraZeus\Accordion\Forms\Accordion::make('main-data')
             ->columns()
             ->label('User Details')
-            ->icon('iconpark-commentone')
+            ->icon('tabler-message-chatbot-filled')
             ->badge('New Badge')
             ->badgeColor('info')
             ->schema([
@@ -48,7 +48,7 @@ to use @zeus accordion in your infolist:
         \LaraZeus\Accordion\Infolists\Accordion::make('main-data')
             ->columns()
             ->label('User Details')
-            ->icon('iconpark-commentone')
+            ->icon('tabler-message-chatbot-filled')
             ->schema([
                 TextInput::make('name')->required(),
                 TextInput::make('email')->required(),
