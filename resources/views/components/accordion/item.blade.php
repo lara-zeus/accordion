@@ -22,7 +22,11 @@
             setActiveAccordion($id('accordion'));
         })
     "
-    class="fi-accordion-item group"
+    :class="{
+        'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
+        'bg-white dark:bg-gray-900': activeAccordion != id,
+     }"
+    class="fi-accordion-item group first:rounded-t-xl last:rounded-b-xl"
 >
     <button
         type="button"
@@ -39,7 +43,7 @@
             @if ($icon !== null)
                 <x-filament::icon
                     :icon="$icon"
-                    class="fi-accordion-item-icon h-5 w-5 shrink-0 transition duration-75"
+                    class="fi-accordion-item-icon h-5 w-5 group-hover:text-primary-600"
                 />
             @endif
 
@@ -61,7 +65,8 @@
             />
         </span>
     </button>
-    <div x-show="activeAccordion == id" x-collapse x-cloak>
-        {{ $slot }}
+    <div
+         x-show="activeAccordion == id" x-collapse x-cloak>
+        <div class="p-4 bg-white dark:bg-gray-900">{{ $slot }}</div>
     </div>
 </div>

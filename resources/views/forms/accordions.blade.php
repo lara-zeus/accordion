@@ -9,13 +9,10 @@
         $attributes
             ->merge([
                 'id' => $getId(),
-                'wire:key' => "{$this->getId()}.{$getStatePath()}." . Accordions::class . '.container',
+                'wire:key' => "{$this->getId()}.{$getStatePath()}." . 'accordions.container',
             ], escape: false)
             ->merge($getExtraAttributes(), escape: false)
             ->merge($getExtraAlpineAttributes(), escape: false)
-            ->class([
-                'rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10',
-            ])
     }}
 >
     <x-zeus-accordion::accordion :activeAccordion="$getActiveAccordion">

@@ -7,7 +7,13 @@
             this.activeAccordion = (this.activeAccordion == id) ? '' : id
         }
     }"
-     class="fi-accordion rounded-xl bg-white shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 relative w-full mx-auto divide-y divide-gray-200 dark:divide-white/5"
+     class="fi-accordion rounded-xl shadow-sm
+        bg-white dark:bg-gray-900
+        ring-1 ring-gray-950/10 dark:ring-white/10
+        divide-y divide-gray-300 dark:divide-white/10
+      "
 >
-    {{ $slot }}
+    <div class="p-2">
+        {{ $slot }}
+    </div>
 </div>
