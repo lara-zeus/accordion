@@ -28,10 +28,6 @@
         type="button"
         @click="setActiveAccordion(id)"
         class="flex items-center justify-between w-full p-4 text-start select-none"
-        :class="{
-            'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
-            'bg-white dark:bg-gray-800/50': activeAccordion != id,
-         }"
     >
         <span
             :class="{
@@ -43,9 +39,10 @@
             @if ($icon !== null)
                 <x-filament::icon
                     :icon="$icon"
-                    class="fi-accordion-item-icon h-6 w-6 shrink-0 transition duration-75"
+                    class="fi-accordion-item-icon h-5 w-5 shrink-0 transition duration-75"
                 />
             @endif
+
             {{ $label }}
 
             @if (filled($badge))
@@ -54,8 +51,14 @@
                 </x-filament::badge>
             @endif
         </span>
-        <span :class="{ 'rotate-180': activeAccordion == id }">
-            @svg('heroicon-m-chevron-down','w-4 h-4 duration-200 ease-out')
+        <span
+            class="duration-200 ease-out"
+            :class="{ 'rotate-180': activeAccordion == id }"
+        >
+            <x-filament::icon
+                class="w-4 h-4"
+                icon="heroicon-m-chevron-down"
+            />
         </span>
     </button>
     <div x-show="activeAccordion == id" x-collapse x-cloak>
