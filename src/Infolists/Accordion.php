@@ -13,7 +13,7 @@ class Accordion extends Component
     use HasBadge;
     use HasIcon;
 
-    protected string $view = 'zeus-accordion::infolists.accordion';
+    protected string $view = 'zeus-accordion::forms.accordion';
 
     final public function __construct(string $label)
     {
