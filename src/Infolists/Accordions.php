@@ -12,7 +12,7 @@ class Accordions extends Component
     use CanBeIsolated;
     use Concerns\HasExtraAlpineAttributes;
 
-    protected string $view = 'zeus-accordion::infolists.accordions';
+    protected string $view = 'zeus-accordion::forms.accordions';
 
     protected int | Closure $activeAccordion = 1;
 
