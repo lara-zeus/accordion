@@ -25,8 +25,8 @@
     :class="{
         'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
         'bg-white dark:bg-gray-900': activeAccordion != id,
+        'fi-accordion-item group first:rounded-t-xl last:rounded-b-xl': true
      }"
-    class="fi-accordion-item group first:rounded-t-xl last:rounded-b-xl"
 >
     <button
         type="button"
@@ -41,10 +41,13 @@
             class="flex gap-2 font-medium items-center justify-center text-gray-500 group-hover:text-primary-600"
         >
             @if ($icon !== null)
-                <x-filament::icon
-                    :icon="$icon"
-                    class="fi-accordion-item-icon h-5 w-5 group-hover:text-primary-600"
-                />
+                <span>
+                    <x-filament::icon
+                        :$getExtraAttributes()
+                        :icon="$icon"
+                        class="fi-accordion-item-icon h-5 w-5 group-hover:text-primary-600"
+                    />
+                </span>
             @endif
 
             {{ $label }}
@@ -59,10 +62,7 @@
             class="duration-200 ease-out"
             :class="{ 'rotate-180': activeAccordion == id }"
         >
-            <x-filament::icon
-                class="w-4 h-4"
-                icon="heroicon-m-chevron-down"
-            />
+            @svg('heroicon-m-chevron-down', 'w-4 h-4')
         </span>
     </button>
     <div

@@ -3,7 +3,7 @@
 namespace LaraZeus\Accordion\Infolists;
 
 use Closure;
-use Filament\Infolists\Components\Component;
+use Filament\Schemas\Components\Component;
 use Filament\Support\Concerns\HasBadge;
 use Filament\Support\Concerns\HasIcon;
 use Illuminate\Support\Str;

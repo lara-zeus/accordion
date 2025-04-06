@@ -3,7 +3,7 @@
 namespace LaraZeus\Accordion\Infolists;
 
 use Closure;
-use Filament\Infolists\Components\Component;
+use Filament\Schemas\Components\Component;
 use Filament\Support\Concerns;
 use LaraZeus\Accordion\Concerns\CanBeIsolated;
 

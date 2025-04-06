@@ -3,8 +3,8 @@
 namespace LaraZeus\Accordion\Forms;
 
 use Closure;
-use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Contracts\CanConcealComponents;
+use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Contracts\CanConcealComponents;
 use Filament\Support\Concerns\HasBadge;
 use Filament\Support\Concerns\HasIcon;
 use Illuminate\Support\Str;
