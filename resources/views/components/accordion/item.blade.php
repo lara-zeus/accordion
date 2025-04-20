@@ -11,14 +11,12 @@
         id: $id('accordion'),
         @if($isIsolated) activeAccordion: 'accordion-{{ $activeAccordion }}', @endif
     }"
-
     :x-on:form-validation-error.window="
         $nextTick(() => {
             let error = $el.querySelector('[data-validation-error]')
             if (! error) {
                 return
             }
-
             setActiveAccordion($id('accordion'));
         })
     "
@@ -31,14 +29,14 @@
     <button
         type="button"
         @click="setActiveAccordion(id)"
-        class="flex items-center justify-between w-full p-4 text-start select-none"
+        class="flex items-center justify-between w-full text-start select-none"
     >
         <span
             :class="{
                 'text-primary-600 dark:text-primary-500': activeAccordion == id ,
                 'text-gray-500 dark:text-white/70': activeAccordion != id
             }"
-            class="flex gap-2 font-medium items-center justify-center text-gray-500 group-hover:text-primary-600"
+            class="px-4 py-4 flex font-medium items-center justify-center text-gray-500 group-hover:text-primary-600"
         >
             @if ($icon !== null)
                 <span>
@@ -59,14 +57,13 @@
             @endif
         </span>
         <span
-            class="duration-200 ease-out"
+            class="me-3 duration-200 ease-out"
             :class="{ 'rotate-180': activeAccordion == id }"
         >
             @svg('heroicon-m-chevron-down', 'w-4 h-4')
         </span>
     </button>
-    <div
-         x-show="activeAccordion == id" x-collapse x-cloak>
+    <div x-show="activeAccordion == id" x-collapse x-cloak>
         <div class="p-4 bg-white dark:bg-gray-900">{{ $slot }}</div>
     </div>
 </div>
