@@ -31,21 +31,18 @@
         @click="setActiveAccordion(id)"
         class="flex items-center justify-between w-full text-start select-none"
     >
-        <span
+        <div
             :class="{
+                'px-4 py-4 flex font-medium items-center justify-center text-gray-500 group-hover:text-primary-600 gap-2': true ,
                 'text-primary-600 dark:text-primary-500': activeAccordion == id ,
                 'text-gray-500 dark:text-white/70': activeAccordion != id
             }"
-            class="px-4 py-4 flex font-medium items-center justify-center text-gray-500 group-hover:text-primary-600"
         >
             @if ($icon !== null)
-                <span>
-                    <x-filament::icon
-                        :$getExtraAttributes()
-                        :icon="$icon"
-                        class="fi-accordion-item-icon h-5 w-5 group-hover:text-primary-600"
-                    />
-                </span>
+                <x-filament::icon
+                    :icon="$icon"
+                    class="fi-accordion-item-icon h-5 w-5 group-hover:text-primary-600"
+                />
             @endif
 
             {{ $label }}
@@ -55,7 +52,7 @@
                     {{ $badge }}
                 </x-filament::badge>
             @endif
-        </span>
+        </div>
         <span
             class="me-3 duration-200 ease-out"
             :class="{ 'rotate-180': activeAccordion == id }"
