@@ -7,7 +7,7 @@
 <p align="center">
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/lara-zeus/accordion.svg?style=flat-square)](https://packagist.org/packages/lara-zeus/accordion)
-[![Code Style](https://img.shields.io/github/actions/workflow/status/lara-zeus/accordion/fix-php-code-style-issues.yml?label=code-style&flat-square)](https://github.com/lara-zeus/accordion/actions?query=workflow%3Afix-php-code-style-issues+branch%3A1.x)
+[![Code Style](https://img.shields.io/github/actions/workflow/status/lara-zeus/accordion/fix-php-code-style-issues.yml?label=code-style&flat-square)](https://github.com/lara-zeus/accordion/actions?query=workflow%3Afix-php-code-style-issues+branch%3A2.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/lara-zeus/accordion.svg?style=flat-square)](https://packagist.org/packages/lara-zeus/accordion)
 [![Total Downloads](https://img.shields.io/github/stars/lara-zeus/accordion?style=flat-square)](https://github.com/lara-zeus/accordion)
 
