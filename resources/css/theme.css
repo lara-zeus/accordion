@@ -1,0 +1,15 @@
+.zeus-accordion {
+    @apply rounded-xl shadow-sm bg-white dark:bg-gray-900 ring-1 ring-gray-950/10 dark:ring-white/10 divide-y divide-gray-300 dark:divide-white/10;
+}
+.zeus-accordion-container {
+    @apply p-2;
+}
+.zeus-accordion-item {
+    @apply first:rounded-t-xl last:rounded-b-xl;
+}
+.zeus-accordion-item-icon {
+    @apply h-5 w-5 hover:text-primary-600;
+}
+.zeus-accordion-item-content {
+    @apply p-4 bg-white dark:bg-gray-900;
+}

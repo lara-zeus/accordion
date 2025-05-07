@@ -23,7 +23,7 @@
     :class="{
         'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
         'bg-white dark:bg-gray-900': activeAccordion != id,
-        'fi-accordion-item group first:rounded-t-xl last:rounded-b-xl': true
+        'zeus-accordion-item': true
      }"
 >
     <button
@@ -41,7 +41,7 @@
             @if ($icon !== null)
                 <x-filament::icon
                     :icon="$icon"
-                    class="fi-accordion-item-icon h-5 w-5 group-hover:text-primary-600"
+                    class="zeus-accordion-item-icon"
                 />
             @endif
 
@@ -54,13 +54,15 @@
             @endif
         </div>
         <span
-            class="me-3 duration-200 ease-out"
-            :class="{ 'rotate-180': activeAccordion == id }"
+            :class="{
+                'rotate-180': activeAccordion == id,
+                'me-3 duration-200 ease-out': true,
+            }"
         >
             @svg('heroicon-m-chevron-down', 'w-4 h-4')
         </span>
     </button>
     <div x-show="activeAccordion == id" x-collapse x-cloak>
-        <div class="p-4 bg-white dark:bg-gray-900">{{ $slot }}</div>
+        <div class="zeus-accordion-item-content">{{ $slot }}</div>
     </div>
 </div>
