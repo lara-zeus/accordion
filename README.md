@@ -7,19 +7,23 @@
 <p align="center">
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/lara-zeus/accordion.svg?style=flat-square)](https://packagist.org/packages/lara-zeus/accordion)
-[![Code Style](https://img.shields.io/github/actions/workflow/status/lara-zeus/accordion/fix-php-code-style-issues.yml?label=code-style&flat-square)](https://github.com/lara-zeus/accordion/actions?query=workflow%3Afix-php-code-style-issues+branch%3Amain)
+[![Code Style](https://img.shields.io/github/actions/workflow/status/lara-zeus/accordion/fix-php-code-style-issues.yml?label=code-style&flat-square)](https://github.com/lara-zeus/accordion/actions?query=workflow%3Afix-php-code-style-issues+branch%3A1.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/lara-zeus/accordion.svg?style=flat-square)](https://packagist.org/packages/lara-zeus/accordion)
 [![Total Downloads](https://img.shields.io/github/stars/lara-zeus/accordion?style=flat-square)](https://github.com/lara-zeus/accordion)
 
 </p>
 
-## features
+## Features
 - 🔥 same look and feel as filament components
 - 🔥 can be used as connected accordion, or isolated
 - 🔥 set the active accordion
 - 🔥 set icon per accordion
+- 🔥 Infolists entry
+- 🔥 Blade Component
 
 ## Screenshots
+
+![](https://larazeus.com/images/screenshots/accordion/cover.webp)
 
 ![](https://larazeus.com/images/screenshots/accordion/accordion-1.webp)
 
@@ -38,8 +42,8 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on recent changes.
 ## Support
 available support channels:
 
-* open an issue on [GitHub](https://github.com/lara-zeus/accordion/issues)
-* Email us using the [contact center](https://larazeus.com/contact-us)
+* Open an issue on [GitHub](https://github.com/lara-zeus/accordion/issues)
+* Join our channel on [discord channel](https://discord.com/channels/883083792112300104/1282751058015420528/1282751058015420528)
 
 ## Contributing
 
@@ -51,7 +55,7 @@ If you find any security-related issues, please email info@larazeus.com instead 
 
 ## Credits
 
--   [Lara Zeus (Ash)](https://github.com/atmonshi)
+-   [Lara Zeus](https://github.com/atmonshi)
 -   [All Contributors](../../contributors)
 
 ## License
