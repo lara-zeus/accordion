@@ -23,7 +23,7 @@
     :class="{
         'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
         'bg-white dark:bg-gray-900': activeAccordion != id,
-        'zeus-accordion-item': true
+        'group first:rounded-t-xl last:rounded-b-xl': true
      }"
 >
     <button
@@ -41,7 +41,7 @@
             @if ($icon !== null)
                 <x-filament::icon
                     :icon="$icon"
-                    class="zeus-accordion-item-icon"
+                    class="h-5 w-5 hover:text-primary-600"
                 />
             @endif
 
@@ -63,6 +63,6 @@
         </span>
     </button>
     <div x-show="activeAccordion == id" x-collapse x-cloak>
-        <div class="zeus-accordion-item-content">{{ $slot }}</div>
+        <div class="p-4 bg-white dark:bg-gray-900">{{ $slot }}</div>
     </div>
 </div>
