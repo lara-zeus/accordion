@@ -4,6 +4,7 @@ namespace LaraZeus\Accordion\Infolists;
 
 use Closure;
 use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Concerns\HasLabel;
 use Filament\Support\Concerns;
 use LaraZeus\Accordion\Concerns\CanBeIsolated;
 
@@ -11,6 +12,7 @@ class Accordions extends Component
 {
     use CanBeIsolated;
     use Concerns\HasExtraAlpineAttributes;
+    use HasLabel;
 
     protected string $view = 'zeus-accordion::forms.accordions';
 

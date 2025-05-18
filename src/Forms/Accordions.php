@@ -16,11 +16,6 @@ class Accordions extends Component
 
     protected int | Closure $activeAccordion = 1;
 
-    final public function __construct(?string $label = null)
-    {
-        $this->label($label);
-    }
-
     public static function make(?string $label = null): static
     {
         $static = app(static::class, ['label' => $label]);

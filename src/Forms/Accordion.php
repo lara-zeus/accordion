@@ -4,6 +4,7 @@ namespace LaraZeus\Accordion\Forms;
 
 use Closure;
 use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Concerns\HasLabel;
 use Filament\Schemas\Components\Contracts\CanConcealComponents;
 use Filament\Support\Concerns\HasBadge;
 use Filament\Support\Concerns\HasIcon;
@@ -13,6 +14,7 @@ class Accordion extends Component implements CanConcealComponents
 {
     use HasBadge;
     use HasIcon;
+    use HasLabel;
 
     protected string $view = 'zeus-accordion::forms.accordion';
 

@@ -4,6 +4,7 @@ namespace LaraZeus\Accordion\Infolists;
 
 use Closure;
 use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Concerns\HasLabel;
 use Filament\Support\Concerns\HasBadge;
 use Filament\Support\Concerns\HasIcon;
 use Illuminate\Support\Str;
@@ -12,6 +13,7 @@ class Accordion extends Component
 {
     use HasBadge;
     use HasIcon;
+    use HasLabel;
 
     protected string $view = 'zeus-accordion::forms.accordion';
 
