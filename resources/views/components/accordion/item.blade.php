@@ -11,39 +11,37 @@
         id: $id('accordion'),
         @if($isIsolated) activeAccordion: 'accordion-{{ $activeAccordion }}', @endif
     }"
-
     :x-on:form-validation-error.window="
         $nextTick(() => {
             let error = $el.querySelector('[data-validation-error]')
             if (! error) {
                 return
             }
-
             setActiveAccordion($id('accordion'));
         })
     "
     :class="{
         'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
         'bg-white dark:bg-gray-900': activeAccordion != id,
+        'group first:rounded-t-xl last:rounded-b-xl': true
      }"
-    class="fi-accordion-item group first:rounded-t-xl last:rounded-b-xl"
 >
     <button
         type="button"
         @click="setActiveAccordion(id)"
-        class="flex items-center justify-between w-full p-4 text-start select-none"
+        class="flex items-center justify-between w-full text-start select-none"
     >
-        <span
+        <div
             :class="{
+                'px-4 py-4 flex font-medium items-center justify-center text-gray-500 group-hover:text-primary-600 gap-2': true ,
                 'text-primary-600 dark:text-primary-500': activeAccordion == id ,
                 'text-gray-500 dark:text-white/70': activeAccordion != id
             }"
-            class="flex gap-2 font-medium items-center justify-center text-gray-500 group-hover:text-primary-600"
         >
             @if ($icon !== null)
                 <x-filament::icon
                     :icon="$icon"
-                    class="fi-accordion-item-icon h-5 w-5 group-hover:text-primary-600"
+                    class="h-5 w-5 hover:text-primary-600"
                 />
             @endif
 
@@ -54,19 +52,17 @@
                     {{ $badge }}
                 </x-filament::badge>
             @endif
-        </span>
+        </div>
         <span
-            class="duration-200 ease-out"
-            :class="{ 'rotate-180': activeAccordion == id }"
+            :class="{
+                'rotate-180': activeAccordion == id,
+                'me-3 duration-200 ease-out': true,
+            }"
         >
-            <x-filament::icon
-                class="w-4 h-4"
-                icon="heroicon-m-chevron-down"
-            />
+            @svg('heroicon-m-chevron-down', 'w-4 h-4')
         </span>
     </button>
-    <div
-         x-show="activeAccordion == id" x-collapse x-cloak>
+    <div x-show="activeAccordion == id" x-collapse x-cloak>
         <div class="p-4 bg-white dark:bg-gray-900">{{ $slot }}</div>
     </div>
 </div>

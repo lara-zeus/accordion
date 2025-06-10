@@ -5,8 +5,8 @@ parameters:
     level: 6
     paths:
         - src
+    ignoreErrors:
+        - identifier: missingType.iterableValue
 
     checkOctaneCompatibility: true
     checkModelProperties: true
-    checkMissingIterableValueType: false
-    checkGenericClassInNonGenericObjectType: false
