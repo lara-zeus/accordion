@@ -3,26 +3,16 @@
 namespace LaraZeus\Accordion\Forms;
 
 use Closure;
-use Filament\Schemas\Components\Component;
-use Filament\Support\Concerns;
+use Filament\Schemas\Components\Tabs;
 use LaraZeus\Accordion\Concerns\CanBeIsolated;
 
-class Accordions extends Component
+class Accordions extends Tabs
 {
     use CanBeIsolated;
-    use Concerns\HasExtraAlpineAttributes;
 
     protected string $view = 'zeus-accordion::forms.accordions';
 
     protected int | Closure $activeAccordion = 1;
-
-    public static function make(?string $label = null): static
-    {
-        $static = app(static::class, ['label' => $label]);
-        $static->configure();
-
-        return $static;
-    }
 
     public function activeAccordion(int | Closure $activeAccordion): static
     {

@@ -67,6 +67,6 @@
             ]
         }
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "beta",
     "prefer-stable": true
 }
