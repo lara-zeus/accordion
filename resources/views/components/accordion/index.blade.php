@@ -1,9 +1,9 @@
 @props([
-    'activeAccordion' => 1,
+    'activeAccordion' => null,
 ])
 <div
     x-data="{
-        activeAccordion: 'accordion-{{ $activeAccordion }}',
+        activeAccordion: @js($activeAccordion),
         setActiveAccordion(id) {
             this.activeAccordion = (this.activeAccordion == id) ? '' : id
         }

@@ -1,30 +1,26 @@
 @props([
-    'activeAccordion' => 1,
+    'activeAccordion' => null,
+    'accordionId' => null,
     'isIsolated' => false,
     'icon' => null,
     'label' => '',
     'badge' => null,
     'badgeColor' => null,
 ])
+@php
+    $id = $accordionId ?? uniqid('accordion-', true);
+@endphp
 <div
     x-data="{
-        id: $id('accordion'),
-        @if($isIsolated) activeAccordion: 'accordion-{{ $activeAccordion }}', @endif
-    }"
-    :x-on:form-validation-error.window="
-        $nextTick(() => {
-            let error = $el.querySelector('[data-validation-error]')
-            if (! error) {
-                return
-            }
-            setActiveAccordion($id('accordion'));
-        })
-    "
-    :class="{
-        'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
-        'bg-white dark:bg-gray-900': activeAccordion != id,
-        'group first:rounded-t-xl last:rounded-b-xl': true
-     }"
+            id: @js($id),
+            @if($isIsolated) activeAccordion: @js($activeAccordion), @endif
+        }"
+        x-on:expand="activeAccordion = id"
+        :class="{
+            'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
+            'bg-white dark:bg-gray-900': activeAccordion != id,
+            'group first:rounded-t-xl last:rounded-b-xl': true
+        }"
 >
     <button
         type="button"
