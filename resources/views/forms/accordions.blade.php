@@ -1,6 +1,6 @@
 @php
     $isIsolated = $isIsolated();
-    $getActiveAccordion = $getActiveAccordion();
+    $activeAccordion = $getActiveAccordion();
 @endphp
 <div
     wire:ignore.self
@@ -15,15 +15,30 @@
             ->merge($getExtraAlpineAttributes(), escape: false)
     }}
 >
-    <x-zeus-accordion::accordion :activeAccordion="$getActiveAccordion">
-        @foreach ($getChildComponentContainer()->getComponents() as $accordion)
+    @php
+        $accordions = $getChildComponentContainer()->getComponents();
+        $activeAccordionId = null;
+        
+        $index = 1;
+        foreach ($accordions as $accordion) {
+            if ($index === $activeAccordion) {
+                $activeAccordionId = $accordion->getId();
+                break;
+            }
+            $index++;
+        }
+    @endphp
+
+    <x-zeus-accordion::accordion :activeAccordion="$activeAccordionId">
+        @foreach ($accordions as $accordion)
             <x-zeus-accordion::accordion.item
                 :label="$accordion->getLabel()"
                 :icon="$accordion->getIcon()"
                 :badge="$accordion->getBadge()"
                 :badge-color="$accordion->getBadgeColor()"
                 :isIsolated="$isIsolated"
-                :activeAccordion="$getActiveAccordion"
+                :activeAccordion="$activeAccordionId"
+                :accordionId="$accordion->getId()"
             >
                 {{ $accordion }}
             </x-zeus-accordion::accordion.item>
