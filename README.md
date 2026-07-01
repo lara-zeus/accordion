@@ -13,6 +13,14 @@
 
 </p>
 
+## Versions
+
+| Plugin Version | Filament Version |
+| --- |------------------|
+| `v1.x` | `v3.x`           |
+| `v2.x` | `v4.x`           |
+| `v3.x` | `v5.x`           |
+
 ## Features
 - 🔥 same look and feel as filament components
 - 🔥 can be used as connected accordion, or isolated

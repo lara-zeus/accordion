@@ -6,26 +6,27 @@
     'label' => '',
     'badge' => null,
     'badgeColor' => null,
+    'iteration' => 1,
 ])
 @php
     $id = $accordionId ?? uniqid('accordion-', true);
 @endphp
 <div
     x-data="{
-            id: @js($id),
-            @if($isIsolated) activeAccordion: @js($activeAccordion), @endif
-        }"
-        x-on:expand="activeAccordion = id"
-        :class="{
-            'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
-            'bg-white dark:bg-gray-900': activeAccordion != id,
-            'group first:rounded-t-xl last:rounded-b-xl': true
-        }"
+        id: @js($id),
+        @if($isIsolated) activeAccordion: @js($activeAccordion), @endif
+    }"
+    x-on:expand="activeAccordion = id"
+    :class="{
+        'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
+        'bg-white dark:bg-gray-900': activeAccordion != id,
+        'zeus-accordion-container zeus-accordion-container-{{ $iteration }} group first:rounded-t-xl last:rounded-b-xl': true
+    }"
 >
     <button
         type="button"
         @click="setActiveAccordion(id)"
-        class="flex items-center justify-between w-full text-start select-none"
+        class="zeus-accordion-btn zeus-accordion-btn-{{ $iteration }} flex items-center justify-between w-full text-start select-none"
     >
         <div
             :class="{
