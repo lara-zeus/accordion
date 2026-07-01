@@ -39,6 +39,7 @@
                 :isIsolated="$isIsolated"
                 :activeAccordion="$activeAccordionId"
                 :accordionId="$accordion->getId()"
+                :iteration="$loop->iteration"
             >
                 {{ $accordion }}
             </x-zeus-accordion::accordion.item>
