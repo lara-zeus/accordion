@@ -1,6 +1,7 @@
 @php
     $isIsolated = $isIsolated();
     $activeAccordion = $getActiveAccordion();
+    $livewireKey = $getLivewireKey();
 @endphp
 <div
     wire:ignore.self
@@ -9,7 +10,9 @@
         $attributes
             ->merge([
                 'id' => $getId(),
-                'wire:key' => "{$this->getId()}.{$getStatePath()}." . 'accordions.container',
+                'wire:key' => filled($livewireKey)
+                    ? "{$livewireKey}.accordions.container"
+                    : "{$this->getId()}.{$getStatePath()}.accordions.container",
             ], escape: false)
             ->merge($getExtraAttributes(), escape: false)
             ->merge($getExtraAlpineAttributes(), escape: false)

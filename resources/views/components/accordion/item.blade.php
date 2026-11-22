@@ -20,17 +20,17 @@
     :class="{
         'bg-gray-100 dark:bg-gray-800': activeAccordion == id,
         'bg-white dark:bg-gray-900': activeAccordion != id,
-        'zeus-accordion-container zeus-accordion-container-{{ $iteration }} group first:rounded-t-xl last:rounded-b-xl': true
+        'zeus-accordion-container zeus-accordion-container-{{ $iteration }} first:rounded-t-xl last:rounded-b-xl': true
     }"
 >
     <button
         type="button"
         @click="setActiveAccordion(id)"
-        class="zeus-accordion-btn zeus-accordion-btn-{{ $iteration }} flex items-center justify-between w-full text-start select-none"
+        class="zeus-accordion-btn zeus-accordion-btn-{{ $iteration }} group/accordion-item flex items-center justify-between w-full text-start select-none"
     >
         <div
             :class="{
-                'px-4 py-4 flex font-medium items-center justify-center text-gray-500 group-hover:text-primary-600 gap-2': true ,
+                'px-4 py-4 flex font-medium items-center justify-center text-gray-500 group-hover/accordion-item:text-primary-600 gap-2': true ,
                 'text-primary-600 dark:text-primary-500': activeAccordion == id ,
                 'text-gray-500 dark:text-white/70': activeAccordion != id
             }"
